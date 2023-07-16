@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404 Error Code</title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-top: 150px;
+            font-size: 36px;
+        }
+        
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>404 Error Code</h1>
+    <p>404 Error Code: sector "<span id="sectorName"></span>" doesn't exist. Please retry entry.</p>
+
+    <script>
+        var sectorName = decodeURIComponent(window.location.search.substring(1));
+        document.getElementById("sectorName").textContent = sectorName;
+    </script>
+</body>
+</html>
