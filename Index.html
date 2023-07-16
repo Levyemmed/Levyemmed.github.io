@@ -2,12 +2,7 @@
 <html>
 <head>
     <title>JPTA</title>
-    <link rel="icon" type="image/jpg" href="images/20230716_015359.jpg">
-    <script>
-        function redirectToTwitter() {
-            window.location.href = "https://twitter.com/JewProTelAviv";
-        }
-    </script>
+    <link rel="icon" type="image/jpeg" href="images/example.jpeg">
     <style>
         body {
             background-repeat: no-repeat;
@@ -45,7 +40,7 @@
             }
             
             body.mobile-bg-compressed {
-                background-image: url('images/example-mobile.jpeg');
+                background-image: url('images/desktop-wallpaper-1080x1920-best-blue-iphone-phone-one-color.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -66,24 +61,31 @@
     <script>
         function setBackgroundImage() {
             var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            var backgroundImageUrl = isMobile ? 'images/example-mobile.jpeg' : 'images/example-computer.jpeg';
+            var backgroundImageUrl = isMobile ? 'images/desktop-wallpaper-1080x1920-best-blue-iphone-phone-one-color.jpg' : 'images/397a3eef10e6bbe12f74af5140ac83f1.jpg';
 
             document.body.style.backgroundImage = "url('" + backgroundImageUrl + "')";
-            if (isMobile && backgroundImageUrl === 'images/example-mobile.jpeg') {
+            if (isMobile && backgroundImageUrl === 'images/desktop-wallpaper-1080x1920-best-blue-iphone-phone-one-color.jpg') {
                 document.body.classList.add('mobile-bg-compressed');
             }
         }
     </script>
 </head>
 <body onload="setBackgroundImage()">
-    
     <div class="translucent-box">
         <h2>Newest Stories:</h2>
         <div class="mini-box">
-            <img src="images/1417108.png" alt="Jewish Fighters Media">
-            <a href="https://example.com"><img src="images/download.png" alt="Twitter" onclick="redirectToTwitter()"></a>
-            <img src="images/20230716_015327.jpg" alt="Telegram">
+            <img src="images/1417108.png" alt="Mini Image 1">
+            <a href="https://example.com"><img src="images/download.png" alt="Mini Image 2" onclick="redirectToTwitter()"></a>
+            <img src="images/20230716_015327.jpg" alt="Mini Image 3">
         </div>
     </div>
+
+    <!-- Rest of your website content goes here -->
+
+    <script>
+        function redirectToTwitter() {
+            window.location.href = "https://twitter.com/JewProTelAviv";
+        }
+    </script>
 </body>
 </html>
