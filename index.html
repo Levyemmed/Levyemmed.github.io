@@ -60,7 +60,8 @@
             }
         }
     </style>
-    <script>function setBackgroundImage() {
+    <script>
+        function setBackgroundImage() {
             var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             var backgroundImageUrl = isMobile ? 'images/desktop-wallpaper-1080x1920-best-blue-iphone-phone-one-color.jpg' : 'images/397a3eef10e6bbe12f74af5140ac83f1.jpg';
 
@@ -71,15 +72,21 @@
         }
 
         window.addEventListener('DOMContentLoaded', function() {
+            var excludedFiles = ["index.html", ""];
+            var currentFilePath = window.location.pathname;
+            var currentSectionId = window.location.hash.substring(1);
+
+            if (excludedFiles.includes(currentFilePath) || excludedFiles.includes(currentSectionId)) {
+                return;
+            }
+
             var sections = document.querySelectorAll('section');
             var sectionIds = [];
             
             for (var i = 0; i < sections.length; i++) {
                 sectionIds.push(sections[i].id);
             }
-            
-            var currentSectionId = window.location.hash.substring(1);
-            
+
             if (!sectionIds.includes(currentSectionId)) {
                 redirectTo404();
             }
@@ -87,18 +94,19 @@
 
         function redirectTo404() {
             window.location.href = "redirects/404.html";
-        } 
+        }
     </script>
 </head>
-<body>
+<body onload="setBackgroundImage()">
     <div class="translucent-box">
+        <h2>Newest Stories:</h2>
         <div class="mini-box">
-            <a href="https://t.me/jewprotelaviv" target="_blank"><img src="images/Telegram_(software)-Logo.wine.svg" alt="Telegram"></a>
-            <a href="https://twitter.com/JewProTelAviv" target="_blank"><img src="images/twitter-4-logo-svg-vector.svg" alt="Twitter"></a>
-            <img src="images/20230716_015327.jpg" alt="Jewish Fighters Media">
+            <a href="https://t.me/jewprotelaviv" target="_blank"><img src="images/1417108.png" alt="Mini Image 1"></a>
+            <a href="https://twitter.com/JewProTelAviv" target="_blank"><img src="images/download.png" alt="Mini Image 2"></a>
+            <img src="images/20230716_015327.jpg" alt="Mini Image 3">
         </div>
         <div class="larger-box">
-            <p>Website under maintenance</p>
+            <p>This is a larger translucent box below the mini-box.</p>
         </div>
     </div>
 
