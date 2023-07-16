@@ -2,9 +2,10 @@
 <html>
 <head>
     <title>JPTA</title>
+    <link rel="icon" type="image/jpeg" href="images/example.jpeg">
     <script>
-        function redirectTo404() {
-            window.location.href = "redirects/404.html";
+        function redirectToTwitter() {
+            window.location.href = "https://twitter.com/JewProTelAviv";
         }
     </script>
     <style>
@@ -73,32 +74,15 @@
             }
         }
     </script>
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var sections = document.querySelectorAll('section');
-            var sectionIds = [];
-            
-            for (var i = 0; i < sections.length; i++) {
-                sectionIds.push(sections[i].id);
-            }
-            
-            var currentSectionId = window.location.hash.substring(1);
-            
-            if (!sectionIds.includes(currentSectionId)) {
-                redirectTo404();
-            }
-        });
-    </script>
 </head>
 <body onload="setBackgroundImage()">
-    <img src="images/example.jpg" alt="Website Tab Logo">
     
     <div class="translucent-box">
         <h2>Newest Stories:</h2>
         <div class="mini-box">
-            <img src="images/example1.jpeg" alt="Mini Image 1">
-            <a href="https://example.com"><img src="images/example2.jpeg" alt="Mini Image 2"></a>
-            <a href="https://example2.com"><img src="images/example3.jpeg" alt="Mini Image 3"></a>
+            <img src="images/1417108.png" alt="Jewish Fighters Media">
+            <a href="https://example.com"><img src="images/download.png" alt="Twitter" onclick="redirectToTwitter()"></a>
+            <img src="images/20230716_015327.jpg" alt="Telegram">
         </div>
     </div>
 </body>
